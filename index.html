@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adidas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <nav class="nav">
+        <ul>
+            <li class="logo">Adidas</li>
+            <li class="menu"><i class="fa fa-bars"></i></li>
+            <li class="men">men</li>
+            <li class="women">women</li>
+            <li class="search"><i class="fa fa-search"></i></li>
+        </ul>
+    </nav>
+
+    <div class="stripes">
+        <div class="line1 line"></div>
+        <div class="line2 line"></div>
+        <div class="line3 line"></div>
+    </div>
+
+    <div class="red-nav">
+        <div class="num">
+            <ul>
+                <li><span>01</span></li>
+                <li>02</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="img-wrapper">
+            <div class="hero"></div>
+        </div>
+        <div class="text">
+            <h1>Originals</h1>
+        </div>
+    </div>
+
+    <div class="tag-line">MENS ORIGINALS
+        <p>adidas running shoes</p>
+    </div>
+
+    <div class="button">
+        <ul>
+            <li>Buy Now</li>
+            <li><i class="fa fa-arrow-right"></i></li>
+        </ul>
+    </div>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <script>
+        TweenMax.from('.nav', 2, {
+            delay: 1,
+            y: -30,
+            opacity: 0,
+            ease: Expo.easeInOut
+        })
+        TweenMax.to('.red-nav', 2, {
+            delay: 1.3,
+            width: '112px',
+            ease: Power3.easeInOut
+        })
+        TweenMax.to('.hero', 2, {
+            delay: .5,
+            width: '500px',
+            ease: Power2.easeInOut
+        })
+        TweenMax.staggerFrom('.line', 2, {
+            delay: 2.5,
+            x: -1000,
+            ease: Circ.easeInOut
+        }, 0.08)
+        TweenMax.from('.text h1', 1.5, {
+            delay: 2.2,
+            x: -1000,
+            ease: Circ.easeInOut
+        })
+        TweenMax.staggerFrom('.num ul li', 2, {
+            delay: 1.5,
+            x: 1000,
+            ease: Circ.easeInOut
+        }, 0.08)
+        TweenMax.staggerFrom('.button ul li', 2, {
+            delay: 4,
+            y: 1000,
+            ease: Circ.easeInOut
+        }, 0.08)
+        TweenMax.from('.tag-line', 2, {
+            delay: 3.5,
+            x: -600,
+            ease: Circ.easeInOut
+        }, 0.08)
+    </script>
+</body>
+
+</html>
